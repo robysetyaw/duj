@@ -20,19 +20,6 @@ if($exeinsertnorm)
   $response['code'] =0;
   $response['message'] = "Failed! Data Not Inserted";
 }
-// $getdata = mysqli_query($koneksi,"SELECT id_transaksi FROM transaksi_penjualan");
-// $id_transaksiCICILAN = addslashes(htmlentities($_GET['getdata']));
-// $insertdata = "INSERT INTO `transaksi_cicilan` (`id`, `id_transaksi`, `jumlah_uang`, `tanggal_diterima`, `id_customer`, `id_user`) VALUES (NULL,'$id_transaksiCICILAN', '$jumlah_uang','$tanggal_diterima','$id_barang','$id_customer','$id_user')";
-// $exeinsertdata = mysqli_query($koneksi,$insertdata);
-// if($exeinsertdata)
-// {
-//   $response['code'] =1;
-//   $response['message'] = "SUCCES COK";
-// }else {
-//   $response['code'] =0;
-//   $response['message'] = "Failed! Data Not Inserted";
-// }
-// echo json_encode($response);
 
 echo json_encode($response);
 
