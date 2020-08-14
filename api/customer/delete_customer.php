@@ -1,10 +1,11 @@
 <?php include_once('../config.php');
 
-$id_barang = addslashes(htmlentities($_POST['id_customer']));
+$id_customer = addslashes(htmlentities($_POST['id_customer']));
 $getdata = mysqli_query($koneksi,"SELECT * FROM customer WHERE id_customer = '$id_customer'");
 $rows = mysqli_num_rows($getdata);
+echo $id_customer;
 
-$delete = "DELETE FROM customer WHERE id_customer = '$id_barang'";
+$delete = "DELETE FROM customer WHERE id_customer = '$id_customer'";
 $exedelete = mysqli_query($koneksi,$delete);
 
 $respose = array();
@@ -21,6 +22,8 @@ if($rows > 0)
   $respose['code'] = 0;
   $respose['message'] = "Failed to Delete, data Not Found";
 }
+// header("location: ../../home.php");
+// exit();
 
 
 echo json_encode($respose);

@@ -10,8 +10,5 @@ define('DB_NAME','db_duj');
 
 
 
-$koneksi = new mysqli(HOSTNAME, USERNAME, PASSWORD, DB_NAME);
-
-
-
+$koneksi = new mysqli(HOSTNAME,USERNAME,PASSWORD,DB_NAME);
 ?>
