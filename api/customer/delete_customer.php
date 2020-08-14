@@ -1,6 +1,6 @@
 <?php include_once('../config.php');
 
-$id_customer = addslashes(htmlentities($_POST['id_customer']));
+$id_customer = addslashes(htmlentities($_GET['id_customer']));
 $getdata = mysqli_query($koneksi,"SELECT * FROM customer WHERE id_customer = '$id_customer'");
 $rows = mysqli_num_rows($getdata);
 echo $id_customer;
