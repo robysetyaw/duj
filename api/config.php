@@ -6,11 +6,11 @@ define('USERNAME','root');
 
 define('PASSWORD','');
 
-define('DB_NAME','zzz');
+define('DB_NAME','db_duj');
 
 
 
-$koneksi = new mysqli(HOSTNAME, USERNAME, PASSWORD, DB_NAME) or die (mysqli_errno());
+$koneksi = new mysqli(HOSTNAME, USERNAME, PASSWORD, DB_NAME);
 
 
 
