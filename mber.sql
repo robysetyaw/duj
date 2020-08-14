@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 13, 2020 at 07:19 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Host: localhost
+-- Generation Time: Aug 14, 2020 at 08:29 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mber`
+-- Database: `db_duj`
 --
 
 -- --------------------------------------------------------
@@ -93,10 +93,13 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id_customer`, `nama_customer`, `nik`, `pekerjaan`, `no_telepon`, `riwayat_penyakit`, `kendala`, `terdaftar_sejak`, `id_user`) VALUES
-(1, '', 1234567891, '', 0, 'rindu mantan', 'ladang mati', '2020-08-12', 1),
-(2, '', 1122334455, '', 0, 'MELIA SEHAT SEJAHTERA', 'UANG TERKURAS MLM', '2020-08-12', 2),
-(4, '', 0, '', 0, '', '', '0000-00-00', 4),
-(7, 'akucustom', 9727428, 'preman', 889708877, 'loroo ati', 'ngeluu', '2020-08-12', 5);
+(1, '', 1234567891, '', 0, 'rindu mantan', 'ladang mati', '2020-08-12', 0),
+(2, '', 1122334455, '', 0, 'MELIA SEHAT SEJAHTERA', 'UANG TERKURAS MLM', '2020-08-12', 0),
+(4, '', 0, '', 0, '', '', '0000-00-00', 0),
+(7, 'akucustom', 9727428, 'preman', 889708877, 'loroo ati', 'ngeluu', '2020-08-12', 0),
+(21, 'hhhh', 123123, 'qweqwe', 123321, 'sdfsdf', 'rfdwefdw', '2020-08-14', 0),
+(38, 'hjgt', 123123, 'jyg', 123321, 'ughugh', 'hvgvgv', '2020-08-14', 2),
+(39, 'awde', 123, 'qwe', 123, 'qwe', 'qwe', '2020-08-12', 2);
 
 -- --------------------------------------------------------
 
@@ -206,8 +209,7 @@ ALTER TABLE `barang`
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`id_customer`),
-  ADD UNIQUE KEY `id_user` (`id_user`);
+  ADD PRIMARY KEY (`id_customer`);
 
 --
 -- Indexes for table `role`
@@ -251,7 +253,7 @@ ALTER TABLE `barang`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `transaksi_penjualan`
@@ -282,16 +284,9 @@ ALTER TABLE `barang`
   ADD CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `userr` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `customer`
---
-ALTER TABLE `customer`
-  ADD CONSTRAINT `customer_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `userr` (`id`) ON UPDATE CASCADE;
-
---
 -- Constraints for table `transaksi_penjualan`
 --
 ALTER TABLE `transaksi_penjualan`
-  ADD CONSTRAINT `transaksi_penjualan_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id_customer`) ON UPDATE CASCADE,
   ADD CONSTRAINT `transaksi_penjualan_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `userr` (`id`) ON UPDATE CASCADE;
 
 --
