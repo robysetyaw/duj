@@ -16,10 +16,10 @@ $response = array();
 if($exeinsertnorm)
 {
   $response['code'] =1;
-  $response['message'] = "Success! Data Inserted";
+  $response['message'] = "Success! Data Berhasil Masuk";
 }else{
   $response['code'] =0;
-  $response['message'] = "Failed! Data Not Inserted";
+  // $response['message'] = "Failed! Data Not Inserted";
 }
 
 echo json_encode($response);
