@@ -9,7 +9,7 @@ function http_request($url) {
     return $output;
 }
 
-$data = http_request("http://localhost/mber/api/view/view_customer.php");
+$data = http_request("http://localhost/duj/api/customer/view_customer.php");
 $data = json_decode($data, TRUE); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +76,7 @@ $data = json_decode($data, TRUE); ?>
             <?= $data["terdaftar_sejak"] ?>
         </td>
         <td colspan="2"> <a href="">Edit</a> 
-                        <a href="../api/customer/delete_customer.php?id=<?= $data['id_customer'] ?>">Hapus</a> 
+                        <a href="../api/customer/delete_customer.php<?= $_GET($data['id_customer']); ?>">Hapus</a> 
         </td>
       </tr>
     </tbody>
