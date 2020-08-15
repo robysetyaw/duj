@@ -12,8 +12,7 @@ $respose = array();
 if($rows > 0)
 {
   if ($exedelete) {
-    $respose['code'] = 1;
-    $respose['message'] = "Deleted Success";
+    header("Location: ../../customer/customer.php");
   }else{
     $respose['code'] = 0;
     $respose['message'] = "Failed to Delete";
