@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 
 </head>
 <body id="page-top">
@@ -48,10 +49,37 @@
           <span>Tambah Barang</span></a>
       </li>
     </ul> 
-    <div class="container-fluid">
+    <div>
+	<form action="../api/barang/create_barang.php" method="post" id="form">
+		<div class="container">
+			
+			<div >
+				<div >
+					<h1>Tambah Barang</h1>
+					<p>Masukkan data dengan benar</p>
+					<hr class="mb-3">
+					<label><b>Nama Barang</b></label>
+					<input type="text" name="nama_barang" id="nama_barang" placeholder="Nama Barang" class="form-control" >
 
-<!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"> </h1>
-    <p class="mb-4">  Selamat Datang di Kasir  </p>
-    </div> 
-    </div>
+					<label><b>Harga Jual</b></label>
+					<input class="form-control" type="text" name="harga_jual" id="harga_jual" placeholder="Harga jual" required>
+
+					<label><b>Harga Pokok</b></label>
+					<input class="form-control" type="text" name="harga_pokok" id="harga_pokok" placeholder="harga_pokok" required>
+
+					<label><b>Stok</b></label>
+					<input class="form-control" type="text" name="stok" id="stok" placeholder="Stok Barang" required>
+
+					<label><b>Update Barang</b></label>
+					<input class="form-control" type="date" name="update_barang" id="update_barang" placeholder="" required>
+                    <hr class="mb-3">
+                    <label><b>Staff Pendaftar</b></label>
+					<input class="form-control" type="text" name="id_user" id="id_user" placeholder="" required>
+					<hr class="mb-3">
+					<input class="btn btn-primary" type="submit" value="Simpan">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</div>

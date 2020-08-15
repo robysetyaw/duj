@@ -15,8 +15,7 @@ $exeinsertnorm = mysqli_query($koneksi,$insertnorm);
 $response = array();
 if($exeinsertnorm)
 {
-  $response['code'] =1;
-  $response['message'] = "Success! Data Berhasil Masuk";
+  header("Location: ../../kasir/barang.php");
 }else{
   $response['code'] =0;
   // $response['message'] = "Failed! Data Not Inserted";

@@ -22,7 +22,7 @@ $data = json_decode($data, TRUE); ?>
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Data Barang</title>
 
   <!-- Custom fonts for this template-->
   <link href="../css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,12 @@ $data = json_decode($data, TRUE); ?>
       <li class="nav-item">
         <a class="nav-link" href="barang.php">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+          <span>Daftar Barang</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="barang_add.php">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tambah Barang</span></a>
       </li>
 </ul>  
       <div class="container-fluid">
@@ -105,3 +110,5 @@ $data = json_decode($data, TRUE); ?>
         </div>    
   </table>
 </div>
+</body>
+</html>
