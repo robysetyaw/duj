@@ -17,8 +17,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $response = array();
     if($exeinsertnorm)
     {
-    $response['code'] =1;
-    $response['message'] = "Success! Data Inserted";
+    header("Location: ../../customer/customer.php");
     }else{
     $response['code'] =0;
     $response['message'] = "Failed! Data Not Inserted";
