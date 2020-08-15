@@ -51,7 +51,7 @@ $data = json_decode($data, TRUE); ?>
         <th>Riwayat Penyakit</th>
         <th>Kendala</th>
         <th>Tanggal Daftar</th>
-        <th>Edit</th>
+        <th>Edit | Hapus</th>
       </tr>
     </thead>
     <?php foreach ($data as $data) { ?>
@@ -75,7 +75,7 @@ $data = json_decode($data, TRUE); ?>
         <td>
             <?= $data["terdaftar_sejak"] ?>
         </td>
-        <td colspan="2"> <a href="customer_edit.php">Edit</a> 
+        <td colspan="2"> <a href="customer_edit.php">Edit</a> |
                         <a href="../api/customer/delete_customer.php?id_customer=<?=$data['id_customer']; ?>">Hapus</a> 
         </td>
       </tr>
