@@ -75,7 +75,7 @@ $data = json_decode($data, TRUE); ?>
         <td>
             <?= $data["terdaftar_sejak"] ?>
         </td>
-        <td colspan="2"> <a href="">Edit</a> 
+        <td colspan="2"> <a href="customer_edit.php">Edit</a> 
                         <a href="../api/customer/delete_customer.php?id_customer=<?=$data['id_customer']; ?>">Hapus</a> 
         </td>
       </tr>
