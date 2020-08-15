@@ -100,6 +100,8 @@ $data = json_decode($data, TRUE); ?>
                 </td>
               </tr>
              </tbody>
-    <?php } ?>
+             <?php } ?>
+            </div>
+        </div>    
   </table>
 </div>
